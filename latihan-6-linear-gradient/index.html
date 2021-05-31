@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear Gradient</title>
+    <style>
+      /* Sintaks  
+            Sederhana :
+            background-image: linear-gradient(<warna awal>, <warna akhir>);
+            Lengkap :
+            background : linear-gradient(<sudut> | <arah>, <warna awal>, <warna akhir>)
+
+            contoh arah :
+            to bottom right
+            to top right
+            to right
+            to left
+
+            color stop :
+            <warna> angka(%)
+         */
+      div {
+        width: 600px;
+        height: 300px;
+        margin: 50px auto;
+        background-image: linear-gradient(
+          to bottom right,
+          red 20%,
+          yellow,
+          green 60%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
