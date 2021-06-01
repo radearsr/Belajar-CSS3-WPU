@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      /* Parameter transition
+            [property] <durasi> [fungsi] [delay]
+
+         Timing function
+          - ease
+          - ease-in
+          - ease-out
+          - ease-in-out
+          - linear
+          - cubic-bezier(w,x,y,z)
+
+         */
+      .container {
+        border: 5px solid black;
+      }
+      .kotak {
+        width: 100px;
+        height: 100px;
+        background-color: salmon;
+        margin: 10px;
+        line-height: 100px;
+        text-align: center;
+      }
+
+      .satu {
+        transition: transform 3s, margin-left 3s 2s, background-color 3s 1s;
+      }
+      .dua {
+        transition: all 3s ease-in;
+      }
+      .tiga {
+        transition: all 3s ease-in-out;
+      }
+      .empat {
+        transition: all 3s ease-out;
+      }
+      .lima {
+        transition: all 3s linear;
+      }
+      .enam {
+        transition: all 3s cubic-bezier(0.45, -0.27, 0.67, 1.2);
+      }
+
+      .container:hover .kotak {
+        transform: rotate(180deg);
+        margin-left: 800px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="kotak satu">ease</div>
+      <div class="kotak dua">ease-in</div>
+      <div class="kotak tiga">ease-in-out</div>
+      <div class="kotak empat">ease-out</div>
+      <div class="kotak lima">linear</div>
+      <div class="kotak enam">cubic-bezier</div>
+    </div>
+  </body>
+</html>
