@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      /* Fungsi Transformasi
+            1. scale ->  Memperbesar/Memperkecil
+            2. rotate -> Memutar
+            3. skew -> Membuat condong/miring
+            4. translate -> Mengubah Posisi
+
+         Sintaks Dasar
+            scale(angka), scaleX(angka), scaleY(angka)
+            rotate(deg), rotateX(deg), rotateY(deg)
+            skew(deg), skewX(deg), skewY(deg)
+            translate(px), translateX(px), translateY(px)
+        
+         */
+      p {
+        text-align: center;
+        font-size: 20px;
+      }
+      .kotak {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        transition: 0.5s;
+      }
+      .satu {
+        background-color: lightblue;
+      }
+      .kotak:hover {
+        transform: translateY(-300px);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="kotak satu"></div>
+    </div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, alias.
+      Eveniet blanditiis quisquam a labore placeat! Voluptas, pariatur! Nihil
+      blanditiis non labore ut, ducimus id quia quos pariatur dolorem
+      consequatur corrupti voluptatibus perspiciatis? Molestiae corrupti,
+      impedit, laborum mollitia necessitatibus ad repudiandae itaque nesciunt
+      quia adipisci ea at, ratione exercitationem deleniti?
+    </p>
+  </body>
+</html>
