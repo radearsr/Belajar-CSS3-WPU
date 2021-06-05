@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "yanone_kaffeesatzextralight";
+  src: url("../font/yanonekaffeesatz-variablefont_wght-webfont.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font: 18px/36px "yanone_kaffeesatzextralight", sans-serif;
+  background-color: #ddd;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 80px;
+  text-align: center;
+  margin: 50px 0;
+  text-shadow: 1px 1px 10px rgb(255, 255, 255);
+}
+
+.container {
+  width: 600px;
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 3px 2px rgb(3, 3, 3, 0.3);
+  border-radius: 5px;
+}
+
+.gallery li {
+  width: 120px;
+  height: 120px;
+  border: 4px solid rgb(90, 90, 90);
+  float: left;
+  position: relative;
+  margin-left: 18px;
+}
+
+.gallery li,
+.gallery li a img,
+.gallery li span {
+  border-radius: 50%;
+}
+
+.gallery li span {
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(141, 141, 141, 0.7);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 120px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgb(224, 224, 224);
+  opacity: 0;
+  transform: scale(0) rotate(0);
+  transition: all 0.3s;
+}
+
+.gallery li a:hover span {
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
+}
+
+.clear {
+  clear: both;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 10;
+  transition: 0.8s;
+}
+
+.overlay:target {
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 30px;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay:target img {
+  animation: zoomAndFade 1s;
+}
+
+.overlay img {
+  max-height: 100%;
+  box-shadow: 0 0 5px rgb(243, 243, 243, 0.5);
+}
+
+.overlay .close {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  margin-left: -20px;
+  background-color: black;
+  line-height: 10px;
+  padding: 5px;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.overlay:target .close {
+  animation: slideDownFade 0.5s 0.5s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+  animation: Fade 0.5s 0.5s forwards;
+}
+
+.next,
+.prev {
+  width: 95px;
+  height: 56px;
+  text-indent: -9999px;
+  position: absolute;
+  top: 40%;
+}
+
+.next {
+  background-image: url(../img/navigasi/next.png);
+  margin-left: 20px;
+}
+
+.prev {
+  background-image: url(../img/navigasi/prev.png);
+  margin-left: -120px;
+}
+
+/* Animasi */
+@keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomDanFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    margin-top: 0;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

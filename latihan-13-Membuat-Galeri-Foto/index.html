@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LightBox</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 class="title">Drone Gallery</h1>
+    <div class="container">
+      <!-- List Gambar -->
+      <ul class="gallery">
+        <li>
+          <!-- Thumbnail -->
+          <a href="#gambar-1">
+            <img
+              src="img/thumb/thumb1.jpg"
+              alt="Gambar Ke 1"
+              width="120"
+              height="120"
+            />
+            <span>Gambar Drone 1</span>
+          </a>
+
+          <!-- Overlay -->
+          <div class="overlay" id="gambar-1">
+            <a href="#gambar-4" class="prev">prev</a>
+            <img src="img/full/gambar1.jpg" alt="" />
+            <a href="#gambar-2" class="next">next</a>
+            <a class="close" href="#">X Close</a>
+          </div>
+        </li>
+
+        <li>
+          <!-- Thumbnail -->
+          <a href="#gambar-2">
+            <img
+              src="img/thumb/thumb2.jpg"
+              alt="Gambar Ke 2"
+              width="120"
+              height="120"
+            />
+            <span>Gambar Drone 2</span>
+          </a>
+          <!-- Overlay -->
+          <div class="overlay" id="gambar-2">
+            <a href="#gambar-1" class="prev">prev</a>
+            <img src="img/full/gambar2.jpg" alt="" />
+            <a href="#gambar-3" class="next">next</a>
+            <a class="close" href="#">X Close</a>
+          </div>
+        </li>
+
+        <li>
+          <!-- Thumbnail -->
+          <a href="#gambar-3">
+            <img
+              src="img/thumb/thumb3.jpg"
+              alt="Gambar Ke 3"
+              width="120"
+              height="120"
+            />
+            <span>Gambar Drone 3</span>
+          </a>
+          <!-- Overlay -->
+          <div class="overlay" id="gambar-3">
+            <a href="#gambar-2" class="prev">prev</a>
+            <img src="img/full/gambar3.jpg" alt="" />
+            <a href="#gambar-4" class="next">next</a>
+            <a class="close" href="#">X Close</a>
+          </div>
+        </li>
+
+        <li>
+          <!-- Thumbnail -->
+          <a href="#gambar-4">
+            <img
+              src="img/thumb/thumb4.jpg"
+              alt="Gambar Ke 4"
+              width="120"
+              height="120"
+            />
+            <span>Gambar Drone 4</span>
+          </a>
+          <!-- Overlay -->
+          <div class="overlay" id="gambar-4">
+            <a href="#gambar-3" class="prev">prev</a>
+            <img src="img/full/gambar4.jpg" alt="" />
+            <a href="#gambar-1" class="next">next</a>
+            <a class="close" href="#">X Close</a>
+          </div>
+        </li>
+
+        <div class="clear"></div>
+      </ul>
+    </div>
+  </body>
+</html>
