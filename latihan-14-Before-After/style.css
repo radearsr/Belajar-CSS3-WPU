@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.form-box {
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 150px auto;
+  padding: 40px;
+  border-radius: 8px;
+}
+.form-box label input {
+  display: none;
+}
+
+.form-box label {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 30px;
+  padding-left: 55px;
+  position: relative;
+}
+
+.form-box label .circle {
+  height: 40px;
+  width: 40px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  transition: border-color 0.5s ease;
+}
+
+.form-box label .circle::before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-color: orange;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-left: 7px;
+  margin-right: 7px;
+  transition: transform 0.5s ease;
+  transform: scale(0);
+}
+
+.form-box label span {
+  font-size: 30px;
+  color: #fff;
+  display: inline-block;
+  transition: color 0.5s ease;
+}
+
+.form-box label input:checked + .circle {
+  border-color: orange;
+}
+
+.form-box label input:checked + .circle::before {
+  transform: scale(1);
+}
+
+.form-box label input:checked + .circle + span {
+  color: orange;
+}
